@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='i/Nlogo.png') }}" type="image/x-icon">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/prediction.css') }}">
+    <title>AnalyticsCrew | Prediction</title>
+</head>
+<body>
+    <div class="container register">
+        <a href=" {{ url_for('checksession') }} "><img src="{{ url_for('static', filename='i/All.png') }}" height="50"
+            width="120" alt="logo" /></a>
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome</h3>
+                <p>You can see employees behavior prediction here!</p>
+                <a href="{{url_for('checksession')}}"><input type="submit" name="" value="Back to home" /><br /></a>
+            </div>
+            <div class="col-md-9 register-right">
+               
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Employee Behavior Prediction</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <form method="POST" action="{{ url_for('prediction') }}" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <input type="text" name="fullname" class="form-control" placeholder="Full Name" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="allocatedDays" class="form-control" placeholder="Project Allocated Days" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="completedInDays" class="form-control" placeholder="Project Completed in Days" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="appraisal" class="form-control" placeholder="Appraisals" value="" />
+                                </div>
+                                
+                                <div class="form-group">
+                                    <p>Is Employee on Time?</p>
+                                    <div class="maxl">
+                                        <label class="radio inline">
+                                            <input type="radio" name="isOnTime" value="1" checked>
+                                            
+                                            <span> Yes </span>
+                            
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="isOnTime" value="0">
+                                            <span> No </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p>Upload CSV file</p>
+                                <input type="file" name='file'>
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <div class="form-group">
+                                    <input type="number" name="complaints" class="form-control"
+                                        placeholder="Complaints Received" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <p>Joining Date</p><input type="date" name="doj" placeholder="Joining Date">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="hours" class="form-control" placeholder="Average Working Hours(Monthly)" value="" />
+                                </div>
+                                <div class="form-group">
+                                </div>
+                                
+                                <div class="form-group">
+                        
+                                    <p style="color: red;"> {{ errorMsg }} </p>
+                                </div>
+
+                            <input type="submit" class="btn btn-primary" value="Predict" onclick="myFunction()" /> <input type="reset" class="btn btn-danger"
+                                value="Reset" /><p id = "text"></p><br><br><br><br>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    
+    </div>
+    <script>
+        function myFunction() {
+                document.getElementById("text").innerHTML = "Predicting...";
+            }
+    </script>
+</body>
+</html>

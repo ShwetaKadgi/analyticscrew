@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>AnalyticsCrew</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="{{ url_for('static', filename='i/Nlogo.png') }}" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900|Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<link href="{{ url_for('static', filename='css/btnstyle.css') }}" rel="stylesheet" />
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/btnjs.js') }}"></script>
+	</head> 
+	<body>	
+<!-- Navigation Mobile type 4 -->
+<a href="#" id="scroll" ><span></span></a>
+<a class="open_menu bg_blue radius_full white"><i class="fa fa-bars line_height40"></i></a>
+<div class="navigation_mobile type4">
+	<a class="close_menu white"><i class="fa fa-close"></i></a>
+	
+	<div class="padding_top30 padding_bottom60 inner">
+		<div class="max_width230 left40 font18 white slogan">
+			With Startup, we don't make you start from an empty slate.
+		</div>
+		<a href="#" class="top20 left40 bottom40 btn size40 transparent_white border border_white radius6 uppercase spacing15 font12 padding_sides20">Get Started</a>
+		
+		<div class="hr height1 white opacity1"></div>
+		<a href="#" class="left40 font_second font22 line_height70 link white"><i class="fa fa-asterisk font18 line_height70 right20"></i>Home</a>
+		<div class="hr height1 white opacity1"></div>
+		<a href="#" class="left40 font_second font22 line_height70 link white"><i class="fa fa-briefcase font18 line_height70 right20"></i>About Us</a>
+		<div class="hr height1 white opacity1"></div>
+		<a href="#" class="left40 font_second font22 line_height70 link white"><i class="fa fa-paint-brush font18 line_height70 right20"></i>Contacts</a>
+		<div class="hr height1 white opacity1"></div>
+		<a href="#" class="left40 font_second font22 line_height70 link white"><i class="fa fa-coffee font18 line_height70 right20"></i>Login</a>
+		<div class="hr height1 white opacity1"></div>
+		<a href="#" class="left40 font_second font22 line_height70 link white"><i class="fa fa-star font18 line_height70 right20"></i>SignUp</a>
+		<div class="hr height1 white opacity1"></div>
+		<a href="#" class="left40 font_second font22 line_height70 link white"><i class="fa fa-question-circle font18 line_height70 right20"></i>Help</a>
+		<div class="hr height1 white opacity1"></div>
+
+		<div class="left40 top110 links">
+			<div><a href="#" class="font12 semibold white link opacity3 uppercase spacing15 bottom20">Privacy Policy</a></div>
+			<div><a href="#" class="font12 semibold white link opacity3 uppercase spacing15 bottom20">Terms & conditions</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- Header 13 -->
+
+<header class="padding_top225 padding_bottom620 header_13">
+
+	<!-- Navigation 16 -->
+
+	<nav class="navigation_16 transparent padding_top30 padding_bottom30 top30" data-aos="zoom-in" data-aos-delay="0">
+		<div class="container nopadding line_height50">
+			<div class="row">
+				<div class="col-xl-3 white font20 line_height50 logo"><b>Analytics</b>Crew</div>
+				<div class="col-xl-6 text-center">
+					<a href="#home" class="link white light sides20">Home</a>
+					<a href="#aboutus" class="link white light sides20">About Us</a>
+					<a href=" {{ url_for('contact_nav') }} " class="link white light sides20">Contact Us</a>
+				</div>
+				<div class="col-xl-3 block_right">
+					<a href="{{ url_for('signin_nav') }}" class="btn size50 padding_sides25 black float_right">SignIn/SignUp</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div id="home" class="container nopadding text-center inner">
+		<img srcset="{{ url_for('static', filename='i/Nlogo.png') }} 1x, ../static/i/Nlogo.png 2x" src="../static/i/Nlogo.png" class="logo" alt="" data-aos="zoom-in" data-aos-delay="200" />
+		<h1 class="white font_second light font102 top45" data-aos="zoom-in" data-aos-delay="400"><b>Analytics</b>Crew</h1>
+		<div class="margin_auto top40 max_width770 white light font22 text" data-aos="zoom-in" data-aos-delay="600">
+			Behaviour & Performance Analysis reveals which behaviour is effective to achieve organisational goals. More and more organisations need to be ruled by human dynamics, principles and values.
+					 
+		</div>
+	</div>
+</header>
+
+<!-- Content 4 -->
+
+<section class="content_4 bg_white padding_top105 padding_bottom105">
+	<div class="container nopadding max_width970 text-center">
+		<div class="icons font40">
+			<i class="sides25 fa fa-code" data-aos="fade-up" data-aos-delay="0"></i>
+			<i class="sides25 fa fa-heart red" data-aos="fade-up" data-aos-delay="100"></i>
+			<i class="sides25 fa fa-star-o" data-aos="fade-up" data-aos-delay="200"></i>
+		</div>
+		<h2 class="top50 font_second light font42" data-aos="fade-up" data-aos-delay="300">Employee Behaviour Analysis.</h2>
+		<div class="max_width770 margin_auto top45 font22 light text" data-aos="fade-up" data-aos-delay="400">
+			Employees need to behave sensibly at workplace not only to gain appreciation and respect from others but also to maintain a healthy work culture. One needs to adhere to the rules and regulations of workplace.
+		</div>
+	</div>
+</section>
+
+<!-- Feature 26 -->
+
+<section class="feature_26 bg_light_blue padding_top95 padding_bottom100">
+	<div class="container nopadding">
+		<div class="row justify-content-between justify-content-xl-start">
+			<div class="col-lg-5">
+				<img srcset="{{ url_for('static', filename='i/performance.jpg') }} 1x, {{ url_for('static', filename='i/performance.jpg') }} 2x" src="{{ url_for('static', filename='i/performance.jpg') }}" class="max_width_full bg" alt="" data-aos="fade-right" />
+				<img srcset=" {{ url_for('static', filename='i/happy.jpg') }} 1x, {{ url_for('static', filename='i/happy.jpg') }} 2x" src="{{ url_for('static', filename='i/happy.jpg') }}" class="max_width_full bg" alt="" data-aos="fade-right" />
+				<img srcset="{{ url_for('static', filename='i/emp.png') }} 1x, {{ url_for('static', filename='i/emp.png') }} 2x" src="{{ url_for('static', filename='i/emp.png') }}" class="max_width_full bg" alt="" data-aos="fade-right" />
+			</div>
+			<div class="col-lg-6">
+				<div class="top115 max_width600 inner">
+					<h2 class="font42 font_second light dark_gray" data-aos="fade-left" data-aos-delay="100">Employee Performance</h2>
+					<div class="top30 font22 light dark_blue hyphens text" data-aos="fade-left" data-aos-delay="200">
+						Employee performance is defined as how an employee fulfills their job duties and executes their required tasks. It refers to the effectiveness, quality, and efficiency of their output. Performance also contributes to our assessment of how valuable an employee is to the organization.
+					</div>
+					<div class="row justify-content-between top115 blocks">
+						<div class="col-sm-6">
+							<div class="max_width270 bottom50 block" data-aos="fade-up" data-aos-delay="300">
+								<div class="font18 semibold dark_gray title">Quality of work</div>
+								<div class="top15 font18 light dark_blue text">
+									accuracy, thoroughness, competence
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="max_width270 bottom50 block" data-aos="fade-up" data-aos-delay="400">
+								<div class="font18 semibold dark_gray title">Quantity of work </div>
+								<div class="top15 font18 light dark_blue text">
+									productivity level, <br />time management, <br />ability to meet deadlines.
+								</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Feature 15 -->
+
+<!-- Call to Action 1 -->
+
+<!-- Content 18 -->
+
+<!-- Pricing Table 6 -->
+
+<!-- Team 4 -->
+
+<section class="team_4 bg_white padding_top110 padding_bottom120">
+	<div id="aboutus" class="container nopadding text-center dark_gray">
+		<h2 class="font42 font_second light" data-aos="zoom-in" data-aos-delay="0">Website Developer</h2>
+		<div class="margin_auto top65 flex justify_between inner">
+			<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="200">
+				<img srcset="{{ url_for('static', filename='i/SAKIB.jpg') }} 1x, {{ url_for('static', filename='i/SAKIB.jpg') }} 14x" src="{{ url_for('static', filename='i/SAKIB.jpg') }}" class="radius8" alt="" />
+				<div class="top25 font28 light title">Sakib Patel</div>
+				<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+				<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+					Designer who makes easy to change and easy to create new elements.
+				</div>
+			</a>
+			<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="400">
+				<img srcset="{{ url_for('static', filename='i/shweta.png') }} 1x, {{ url_for('static', filename='i/shweta.png') }} 3x" src="{{ url_for('static', filename='i/shweta.png') }}" class="radius8" alt="" />
+				<div class="top25 font28 light title">Shweta Kadgi</div>
+				<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+				<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+					Designer who makes easy to change and easy to create new elements.
+				</div>
+			</a>
+			<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="600">
+				<img srcset="{{ url_for('static', filename='i/akanksha.jpeg') }} 3x, {{ url_for('static', filename='i/akanksha.jpeg') }} 4x" src="{{ url_for('static', filename='i/akanksha.jpeg') }}" class="radius8" alt="" />
+				<div class="top25 font28 light title">Akanksha Tathe</div>
+				<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+				<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+					Designer who makes easy to change and easy to create new elements.
+				</div>
+			</a>
+			<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="200">
+				<img srcset="{{ url_for('static', filename='i/mayuri.jpeg') }} 2x, {{ url_for('static', filename='i/mayuri.jpeg') }} 2.5x" src="{{ url_for('static', filename='i/mayuri.jpeg') }}" class="radius8" alt="" />
+				<div class="top25 font28 light title">Mayuri Rathod</div>
+				<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+				<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+					Designer who makes easy to change and easy to create new elements.
+				</div>
+			</a>
+			<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="600">
+				<img srcset="{{ url_for('static', filename='i/juveriya.jpg') }} 1x, {{ url_for('static', filename='i/juveriya.jpg') }} 4x" src="{{ url_for('static', filename='i/juveriya.jpg') }}" class="radius8" alt="" />
+				<div class="top25 font28 light title">Juveriya Shaikh</div>
+				<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+				<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+					Designer who makes easy to change and easy to create new elements.
+				</div>
+			</a>
+				<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="400">
+					<img srcset=" {{ url_for('static', filename='i/vrushali.jpeg')}} 1x, {{ url_for('static', filename='i/vrushali.jpeg')}} 3x"
+						src="{{ url_for('static', filename='i/vrushali.jpeg')}}" class="radius8" alt="" />
+					<div class="top25 font28 light title">Vrushali Relekar</div>
+					<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+					<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+						Designer who makes easy to change and easy to create new elements.
+					</div>
+				</a>
+				<a href="#" class="width370 margin_auto bottom80 block" data-aos="zoom-in" data-aos-delay="600">
+					<img srcset="{{ url_for('static', filename='i/nikhil.jpeg') }} 1x, {{ url_for('static', filename='i/nikhil.jpeg') }} 5x"
+						src="{{ url_for('static', filename='i/nikhil.jpeg') }}" class="radius8" alt="" />
+					<div class="top25 font28 light title">Nikhil Katte</div>
+					<div class="top10 font12 semibold uppercase spacing10 dark_blue">Project Member</div>
+					<div class="margin_auto top20 max_width270 font18 light dark_blue text">
+						Designer who makes easy to change and easy to create new elements.
+					</div>
+			</a>
+		</div>	
+		
+	</div>
+	
+</section>
+
+<!-- Footer 2 -->
+
+<footer class="footer_2 bg_white padding_top75 padding_bottom70" data-aos="fade-up">
+	<div class="container nopadding">
+		<div class="margin_auto top20 font16 light medium_gray text-center">
+			<link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+Made with <i class="icon ion-heart"></i> in India
+		</div>
+	</div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/aos.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

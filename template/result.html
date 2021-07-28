@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AnalyticsCrew | Result</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ url_for('static', filename='i/Nlogo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animate/animate.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/select2/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/paginate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/ligne.css') }}">
+</head>
+
+<body>
+
+    <div class="contact1">
+        <div class="container-contact1">
+            
+                    
+            <h2 class="contact1-form-title">Prediction Result</h2>
+            <div class="panel">
+                <div class="body">
+                </div>
+            </div>
+            <table class="myTable table hover">
+                <tbody>
+                    <tr>
+    
+                        <th>Name</th>
+                        <th>Project Allocated Days</th>
+                        <th>Project Completed in Days</th>
+                        <th>Appraisals</th>
+                        <th>Is On Time</th>
+                        <th>Complaints</th>
+                        <th>Joining Date</th>
+                        
+                        <th>Behavior</th>
+                    </tr>
+                   
+                   
+                    <tr>
+                        <form>
+                            
+                            
+                            <th>{{ data[0] }}</th>
+                            <th>{{ data[1] }}</th>
+                            <th>{{ data[2] }}</th>
+                            <th>{{ data[3] }}</th>
+                            <th>{{ data[4] }}</th>
+                            <th>{{ data[5] }}</th>
+                            <th>{{ data[6] }}</th>
+                            <th>{{ data[7] }}</th>
+                            <th>{{ data[8] }}</th>
+                        </form>
+                    </tr>
+                    
+
+                </tbody>
+            </table>
+
+            <br><br>
+            <a class="btn btn-primary" href="{{ url_for('prediction_nav') }}">Predict Again</a>
+        </div>
+    </div>
+
+    <script>
+        let options = {
+            numberPerPage: 5,
+            goBar: true,
+            pageCounter: true,
+        };
+
+        let filterOptions = {
+            el: '#searchBox' //Caja de texto para filtrar, puede ser una clase o un ID
+        };
+
+        paginate.init('.myTable', options, filterOptions);
+    </script>
+    <script src="{{ url_for('static',filename='js/paginate.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+</body>
+
+</html>

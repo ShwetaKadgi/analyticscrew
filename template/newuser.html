@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ url_for('static', filename='i/Nlogo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animate/animate.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/select2/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/paginate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/ligne.css') }}">
+</head>
+
+<body>
+
+    <div class="contact1">
+        <div class="container-contact1">
+            <a href=" {{ url_for('checksession') }} "><img src="{{ url_for('static', filename='i/All.png') }}" height="50" width="120"
+                    alt="logo" /></a>
+            <h2 class="contact1-form-title">New User Requests</h2>
+            <div class="panel">
+                <div class="body">
+                </div>
+            </div>
+            <table class="myTable table hover">
+                <tbody>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>User Name</th>
+                        <th>Option 1</th>
+                        <th>Option 2</th>
+                    </tr>
+                    {% set i = 1 | int %}
+                    {% for row in data %}
+                    <tr>
+                        <form>
+                            <input type="hidden" name='username' id="username" value="{{ row[0] }}">
+                            <th>{{ loop.index }}</th>
+                            <th>{{ row[0] }}</th>
+                            <th>
+                                <button type="submit" formmethod="post" name="accpet" value="Accept"
+                                    formaction=" {{ url_for('acceptuser') }} " onclick="alert('Loading..!!')"
+                                    class="btn btn-primary">
+                                    <span>
+                                        Accept
+                                    </span>
+                                </button>
+                            </th>
+                            <th>
+                                <button type="submit" formmethod="post" name="reject" value="Reject" formaction=" {{ url_for('rejectuser') }} "
+                                    onclick="alert('Loading..!!')" class="btn btn-danger">
+                                    <span>
+                                        Reject
+                                    </span>
+                                </button>
+                            </th>
+                        </form>
+                    </tr>
+                    {% set i = i + 1 %}
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+            <br><br>
+        </div>
+    </div>
+
+    <script>
+        let options = {
+            numberPerPage: 5,
+            goBar: true,
+            pageCounter: true,
+        };
+
+        let filterOptions = {
+            el: '#searchBox' //Caja de texto para filtrar, puede ser una clase o un ID
+        };
+
+        paginate.init('.myTable', options, filterOptions);
+    </script>
+    <script src="{{ url_for('static',filename='js/paginate.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+</body>
+
+</html>
